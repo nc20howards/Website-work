@@ -1,0 +1,204 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary: #003366;
+  --accent: #ffcc00;
+  --bg: #f9fafc;
+  --text: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+}
+nav a:hover {
+  color: #fff;
+}
+
+/* Main Section */
+main, section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+h2, h3, h4 {
+  color: var(--primary);
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 20px;
+}
+ul li, ol li {
+  margin: 6px 0;
+}
+
+/* Hobbies cards: two horizontal columns, responsive */
+.hobbies {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: stretch;
+  margin: 20px 0;
+}
+
+/* Card */
+.hobby-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  gap: 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Image (left) and content (right) */
+.hobby-card img {
+  width: 45%;           /* takes left side */
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ensure content area stretches and pads nicely */
+.hobby-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title & paragraph */
+.hobby-content h4 {
+  margin: 0 0 8px 0;
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+.hobby-content p {
+  margin: 0;
+  color: var(--text);
+}
+
+/* Hover effect */
+.hobby-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Responsive: stack cards on small screens and image on top */
+@media (max-width: 700px) {
+  .hobbies {
+    grid-template-columns: 1fr;
+  }
+  .hobby-card {
+    flex-direction: column; /* image on top, content below */
+  }
+  .hobby-card img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+th {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Form */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+input[type="submit"] {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+input[type="submit"]:hover {
+  background: #002244;
+}
+
+/* Images */
+img {
+  border-radius: 6px;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+footer a:hover {
+  color: #fff;
+}
